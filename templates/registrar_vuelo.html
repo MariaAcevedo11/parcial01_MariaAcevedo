@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registrar Vuelo</title>
+</head>
+<body>
+    <h1>Registrar Vuelo</h1>
+    <form method="post">
+        {% csrf_token %}
+
+        <label for="id_nombre">Nombre:</label><br>
+        {{ form.nombre }} <br><br>
+
+        <label for="id_tipo">Tipo:</label><br>
+        <select name="tipo" id="id_tipo">
+            <option value="NACIONAL">Nacional</option>
+            <option value="INTERNACIONAL">Internacional</option>
+        </select><br><br>
+
+        <label for="id_precio">Precio:</label><br>
+        {{ form.precio }} <br><br>
+
+        <button type="submit">Guardar</button>
+    </form>
+</body>
+</html>

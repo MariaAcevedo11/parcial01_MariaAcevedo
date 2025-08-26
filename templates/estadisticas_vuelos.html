@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Estadísticas de Vuelos</title>
+</head>
+<body>
+    <h1>Estadísticas de Vuelos</h1>
+
+    <p><strong>Vuelos Nacionales:</strong> {{ nacionales }}</p>
+    <p><strong>Vuelos Internacionales:</strong> {{ internacionales }}</p>
+
+    <p>
+        <strong>Precio promedio de vuelos Nacionales:</strong> 
+        {% if promedio_nacionales %}
+            ${{ promedio_nacionales|floatformat:2 }}
+        {% else %}
+            No hay vuelos nacionales registrados.
+        {% endif %}
+    </p>
+</body>
+</html>
